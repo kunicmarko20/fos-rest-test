@@ -1,0 +1,11 @@
+language: php
+
+php:
+  - '7.1'
+    
+install:
+  - composer install
+  - bin/console doctrine:schema:update --force
+
+script:
+  - vendor/bin/simple-phpunit
